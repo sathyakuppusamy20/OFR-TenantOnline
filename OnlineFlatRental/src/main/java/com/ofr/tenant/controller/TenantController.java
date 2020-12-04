@@ -60,6 +60,7 @@ public class TenantController {
 		return new ResponseEntity<List<Tenant>>(list, new HttpHeaders(), HttpStatus.OK);
 	}
 	
+	
 	@GetMapping("/find/{tenantId}")
 	public ResponseEntity<Optional<Tenant>> getTenantById(@PathVariable("tenantId") Integer id) throws TenantNotFoundException {
 		Optional<Tenant> tenant = service.viewTenant(id);
